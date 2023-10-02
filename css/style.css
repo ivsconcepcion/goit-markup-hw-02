@@ -5,84 +5,101 @@
     --color-slate: #434455;
     --color-cloud: #F4F4FD;
  }
-
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
  body {
     font-family:'Roboto',Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
  }
 
+ /* default */
  h1,
  h2,
  h3,
  h4,
  h5,
- h6 {
-    font-family:'Roboto',Arial, Helvetica, sans-serif;
+ h6,
+ p {
+    margin: 0;
  }
-
-
+ ul {
+    list-style: none;
+ }
+ a {
+    text-decoration: none;
+ }
+button {
+    font-family: inherit;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
  /* ===========header=========== */
- header [class="main-header"] {
+header [class="main-header"] {
     background-color: var(--color-white);
  }
-.main-header .logo {
+.header .logo {
     font-size: 18px;
     font-family: 'Raleway', sans-serif;
     text-transform:uppercase;
     color: var(--color-navyblue);
     font-weight: 800;
 }
-.main-header .logo span {
+.header .logo span {
     color: var(--color-iris);
 }
-header a {
-    text-decoration: none; 
-}
-header nav ul {
+.main-header nav ul {
     padding: 0;
     margin: 0
 }
-header .nav-item > a {
+.nav-list-item > a {
     color:var(--color-navyblue);
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
-header .nav-item a:hover ,
-header .nav-item .menu-item.active { 
+.nav-item-link:hover ,
+.nav-item-link.active { 
     color:var(--color-iris);
 }
-header .nav-item a:focus {
+.nav-item-link:focus {
     color:var(--color-iris);
 }
 
 /* ===========header contacts============ */
-header header .header-contacts {
+.address-list {
     color: var(--color-navyblue);
 }
-header .header-contacts {
-    padding: 0;
+.address-list-item {
+    font-style: normal;
 }
-header .header-contacts a {
-    color: var(--color-navyblue);
-    padding: 0;
+.address-item-link {
     color:var(--color-slate);
 }
-
+.address-item-link:hover,
+.address-item-link:focus {
+    color: var(--color-iris);
+}
 
 /* ============main-banner============ */
-.mainbanner {
+.hero {
     background-color: var(--color-navyblue);
 }
-.mainbanner h1 {
+.hero-title {
     font-size: 56px;
     font-weight: 700;
     line-height: 60px;
     letter-spacing: 1.12px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform:capitalize;
     color:var(--color-white);
 }
-.mainbanner button {
+.hero button {
     background-color: var(--color-iris);
     text-align: center;
     color:var(--color-white);
@@ -93,26 +110,20 @@ header .header-contacts a {
     text-shadow:none;
     font-size: 16px;
     border: 0;
+    padding: 16px 32px;
 }
 
 
 /* ===============features=========== */
-.features ul {
-    padding: 0;
-}
-/* .features ul li {
-    font-family:'Roboto',Arial, Helvetica, sans-serif;
 
-} */
-
-.features ul li h2 {
+.feature-item-title{
     font-size: 20px;
     font-weight: 500;
     line-height: 24px;
     /* letter-spacing: 0.4px; */
     color:var(--color-navyblue);
 }
-.features ul li p {
+.feature-item-description {
     font-size: 16px;
     line-height: 24px;
     color:var(--color-slate);
@@ -121,60 +132,54 @@ header .header-contacts a {
 
 
 /* ===============Services============= */
-.services h3 {
+.services-title {
     font-size: 36px;
     font-weight: 700;
     text-align: center;
     text-transform: capitalize;
     letter-spacing: 0.72px;
 }
-.services ul {
+.services-list {
     padding: 0;
     margin: 0;
 }
 
 
 /* =================Team=============== */
-.team ul {
-    padding: 0;
-    margin: 0;
-}
-.team ul li a {
-    text-decoration: none;
-}
-.team h3 {
+
+.team-title {
     font-size: 36px;
     font-weight: 700;
     text-align: center;
     text-transform: capitalize;
     letter-spacing: 0.72px;    
 }
-.team h4 {
+.team-item-title{
     font-size: 20px;
     font-weight: 500;
     color:var(--color-navyblue);
 }   
-.team p {
+.team-item-description {
     font-size: 16px;
     color: var(--color-slate);
 }
 
 
 /* ================Footer================= */
-footer {
+.footer {
     background-color: var(--color-navyblue);
 }
-footer .footer-logo {
+.footer-logo {
     text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     color: var(--color-cloud);
     text-decoration: none;
 }
-footer .footer-logo span {
+.footer-logo span {
     color: var(--color-iris);
 }
-footer p {
+.footer-disclaimer {
     font-size: 16px;
     color: var(--color-cloud);
     white-space:pre-wrap;
